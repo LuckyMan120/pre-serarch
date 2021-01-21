@@ -1,0 +1,5 @@
+INSERT INTO public.event_templates (id, valid_from, type, template) VALUES ('5d5bad1f-3f53-4497-8ec2-e8c6555c3d86', '2020-12-15 00:36:24.018019+00', 'EXPERIMENT_CREATED', '{{author_name}} created {{experiment_name}}.');
+INSERT INTO public.event_templates (id, valid_from, type, template) VALUES ('66322acb-fab2-4e33-b8e7-78c7463d6d01', '2020-12-15 00:41:13.732948+00', 'EXPERIMENT_RENAMED', '{{user_name}} renamed {{experiment_name_old}} to {{experiment_name_new}}.');
+INSERT INTO public.event_templates (id, valid_from, type, template) VALUES ('a35c2d15-98cf-4cb5-92d1-5d526f274863', '2020-12-15 00:41:53.512096+00', 'EXPERIMENT_STATUS_CHANGED', '{{user_name}} changed {{experiment_name}} status to {{experiment_status}}.');
+INSERT INTO public.event_templates (id, valid_from, type, template) VALUES ('920b061d-e53e-4dae-a610-04c6b760965a', '2020-12-15 00:42:03.402282+00', 'EXPERIMENT_DELETED', '{{user_name}} deleted {{experiment_name}}.');
+INSERT INTO public.event_templates (id, valid_from, type, template) VALUES ('1202e0a3-17ca-4e26-aa3f-13fac50160d0', '2020-12-15 00:42:11.503789+00', 'EXPERIMENT_EXPORTED', '{{user_name}} exported {{experiment_name}}.');

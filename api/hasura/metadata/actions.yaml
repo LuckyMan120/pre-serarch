@@ -1,0 +1,42 @@
+actions:
+  - name: authenticate
+    definition:
+      kind: synchronous
+      handler: https://us-central1-presearch-295102.cloudfunctions.net/authenticate
+      headers:
+        - name: x-api-key
+          value_from_env: FUNCTIONS_API_KEY
+    permissions:
+      - role: anonymous
+      - role: user
+  - name: invite_collaborator
+    definition:
+      kind: synchronous
+      handler: https://us-central1-presearch-295102.cloudfunctions.net/invite-collaborator
+      headers:
+        - name: x-api-key
+          value_from_env: FUNCTIONS_API_KEY
+    permissions:
+      - role: user
+  - name: upload_scan
+    definition:
+      kind: synchronous
+      handler: https://us-central1-presearch-295102.cloudfunctions.net/upload-scan
+      headers:
+        - name: x-api-key
+          value_from_env: FUNCTIONS_API_KEY
+    permissions:
+      - role: user
+custom_types:
+  enums: []
+  input_objects:
+    - name: InviteCollaboratorInput
+    - name: invite_collaborator_input
+    - name: upload_scan_input
+  objects:
+    - name: AuthOutput
+    - name: InviteCollaboratorOutput
+    - name: invite_collaborator_output
+    - name: upload_scan_output
+    - name: generate_upload_url_output
+  scalars: []

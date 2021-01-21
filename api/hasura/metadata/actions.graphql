@@ -1,0 +1,50 @@
+type Mutation {
+  authenticate(didToken: String!): AuthOutput!
+}
+
+type Mutation {
+  invite_collaborator(
+    payload: invite_collaborator_input!
+  ): invite_collaborator_output!
+}
+
+type Mutation {
+  upload_scan(payload: upload_scan_input!): upload_scan_output!
+}
+
+input InviteCollaboratorInput {
+  project_id: uuid!
+  email: String!
+}
+
+input invite_collaborator_input {
+  project_id: uuid!
+  email: String!
+}
+
+input upload_scan_input {
+  experiment_id: uuid!
+  image_upload: String!
+}
+
+type AuthOutput {
+  success: Boolean!
+  token: String!
+}
+
+type InviteCollaboratorOutput {
+  success: Boolean!
+}
+
+type invite_collaborator_output {
+  success: Boolean!
+}
+
+type upload_scan_output {
+  success: Boolean!
+}
+
+type generate_upload_url_output {
+  success: Boolean!
+  url: String!
+}
